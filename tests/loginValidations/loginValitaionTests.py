@@ -1,7 +1,5 @@
 import unittest
 import time
-from selenium import webdriver
-from selenium.common import WebDriverException
 from utilities.utilities import WebDriverPaths
 from functions.loginValidations.loginValidations import LoginValidations
 
