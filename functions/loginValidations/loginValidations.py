@@ -9,8 +9,7 @@ class LoginValidations:
         self.username_locator = (By.XPATH, "//input[@id='user-name']")
         self.password_locator = (By.XPATH, "//input[@id='password']")
         self.login_button_locator = (By.XPATH, "//input[@id='login-button']")
-        self.username_locator_validator = (By.XPATH, "//div[@class='error-message-container error']")
-        self.password_locator_validator = (By.XPATH, "//div[@class='error-message-container error']")
+        self.locator_validator = (By.XPATH, "//div[@class='error-message-container error']")
 
     # Metodo para ingresar el username en el formulario
     def enter_user_name(self, username):
@@ -26,15 +25,15 @@ class LoginValidations:
     def click_login_button(self):
         self.driver.find_element(*self.login_button_locator).click()
 
-    # Metodo que valida que el userame sea obligatorio
+    # Método que valida que el userame sea obligatorio
     def user_name_required(self):
-        return self.driver.find_element(*self.username_locator_validator).text
+        return self.driver.find_element(*self.locator_validator).text
 
-    # Metodo que valida que el Password sea obligatorio
+    # Método que valida que el Password sea obligatorio
     def user_password_required(self):
-        return self.driver.find_element(*self.password_locator_validator).text
+        return self.driver.find_element(*self.locator_validator).text
 
-    # Metodo que realiza el proceso de login
+    # Método que realiza el proceso de login
     def login(self, username, password):
         self.enter_user_name(username)
         self.enter_password(password)

@@ -11,7 +11,7 @@ class LoginValidationsTests(unittest.TestCase):
         self.driver.get("https://www.saucedemo.com/")
 
     # Valida que el campo Username sea obligatorio
-    def test_01_validate_user_pass(self):
+    def test_01_validate_user_name(self):
         loginValidations = LoginValidations(self.driver)
         loginValidations.login('', 'secret_sauce')
 
@@ -22,7 +22,7 @@ class LoginValidationsTests(unittest.TestCase):
                                                     f"Se esperaba: '{expected_text}', pero se obtuvo: '{alert_text}'.")
 
     # Valida que el campo Password sea obligatorio
-    def test_02_validate_user_name(self):
+    def test_02_validate_user_pass(self):
         loginValidations = LoginValidations(self.driver)
         loginValidations.login('standard_user', '')
 

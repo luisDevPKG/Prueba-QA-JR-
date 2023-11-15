@@ -1,5 +1,4 @@
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.common import WebDriverException
 
 
@@ -18,7 +17,7 @@ class WebDriverElements:
             self.driver.maximize_window()
             self.driver.delete_all_cookies()
         elif browser.lower() == "firefox":
-            # Especifico la ubicación del chromedriver
+            # Especifico la ubicación del firefoxdriver
             firefoxdriver_path = '/Users/lucho/Downloads/Prueba cargo QA R5/AutomationWithPOM/Driver/geckodriver'
             # Configuro las opciones del navegador
             firefox_options = webdriver.FirefoxOptions()
