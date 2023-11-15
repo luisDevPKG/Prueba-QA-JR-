@@ -1,8 +1,9 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 from selenium.common import WebDriverException
 
 
-class WebDriverPaths:
+class WebDriverElements:
     def __init__(self, browser="chrome"):
         if browser.lower() == "chrome":
             # Especifico la ubicación del chromedriver
@@ -33,4 +34,5 @@ class WebDriverPaths:
 
     def get_driver(self):
         return self.driver
+
 

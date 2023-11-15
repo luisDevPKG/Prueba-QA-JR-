@@ -1,21 +1,19 @@
 import unittest
 import time
-from utilities.utilities import WebDriverPaths
+from utilities.utilities import WebDriverElements
 from functions.loginValidations.loginValidations import LoginValidations
 
 
 class LoginValidationsTests(unittest.TestCase):
     def setUp(self):
-        self.driver_paths = WebDriverPaths()
+        self.driver_paths = WebDriverElements()
         self.driver = self.driver_paths.get_driver()
         self.driver.get("https://www.saucedemo.com/")
 
     # Valida que el campo Username sea obligatorio
     def test_01_validate_user_pass(self):
         loginValidations = LoginValidations(self.driver)
-        loginValidations.enter_user_name('')
-        loginValidations.enter_password('secret_sauce')
-        loginValidations.click_login_button()
+        loginValidations.login('', 'secret_sauce')
 
         # Assert para validar la alerta
         expected_text = "Epic sadface: Username is required"
@@ -26,9 +24,8 @@ class LoginValidationsTests(unittest.TestCase):
     # Valida que el campo Password sea obligatorio
     def test_02_validate_user_name(self):
         loginValidations = LoginValidations(self.driver)
-        loginValidations.enter_user_name('standard_user')
-        loginValidations.enter_password('')
-        loginValidations.click_login_button()
+        loginValidations.login('standard_user', '')
+
         # Assert para validar la alerta
         expected_text = "Epic sadface: Password is required"
         alert_text = loginValidations.user_name_required()

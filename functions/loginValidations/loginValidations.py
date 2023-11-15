@@ -1,4 +1,5 @@
 from selenium.webdriver.common.by import By
+from utilities import utilities
 
 
 class LoginValidations:
@@ -16,7 +17,7 @@ class LoginValidations:
         self.driver.find_element(*self.username_locator).clear()
         self.driver.find_element(*self.username_locator).send_keys(username)
 
-    # Metodo para ingresar el username en el formulario
+    # Metodo para ingresar el password en el formulario
     def enter_password(self, password):
         self.driver.find_element(*self.password_locator).clear()
         self.driver.find_element(*self.password_locator).send_keys(password)
