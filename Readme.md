@@ -2,7 +2,11 @@
 Automatizar flujos en la plataforma https://www.saucedemo.com/
 
 # Como clonar el repositorio
-Paso 1: Instalar git Windows: https://git-scm.com/download/win MAC: https://git-scm.com/download/mac General: https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
+Paso 1: Instalar git 
+
+        Windows: https://git-scm.com/download/win 
+        MAC: https://git-scm.com/download/mac 
+        General: https://git-scm.com/book/es/v2/Inicio---Sobre-el-Control-de-Versiones-Instalaci%C3%B3n-de-Git
 
 Paso 2: Abrir git por terminal Windows: CMD MAC: Terminal
 
@@ -36,11 +40,12 @@ Paso 6: Configuracion del WebDriver en el script
 Abrir Pycharm como administrador, abrir el proyecto de automatizacion
 Paso 7: Abrir el Terminal e Instalar las librerias de Selenium, Pytest y Webdriver Manager
 
-pip install selenium o py -m pip install selenium
-pip install pytest o py -m pip install pytest
-pip install webdriver-manager o py -m pip install webdriver-manager
+- pip install selenium o py -m pip install selenium
+- pip install pytest o py -m pip install pytest
+- pip install webdriver-manager o py -m pip install webdriver-manager
+
 En caso de que para SO Windows No se visualicen cambios, abrir cmd, ejecutarlo como administrador y ejecutar los mismos codigos mencionados anteiormente
 
 NOTA:
-Para la ejecucion de scripts se establecíó como navegador predeterminado Google chrome
-Recordar que al descargar el repositorio se debe actualizar la ruta del PATH en el archivo utilites
+- Para la ejecucion de scripts se establecíó como navegador predeterminado Google chrome
+- Recordar que al descargar el repositorio se debe actualizar la ruta del PATH en el archivo utilites
