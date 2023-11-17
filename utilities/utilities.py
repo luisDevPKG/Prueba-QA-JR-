@@ -6,7 +6,7 @@ class WebDriverElements:
     def __init__(self, browser="chrome"):
         if browser.lower() == "chrome":
             # Especifico la ubicación del chromedriver
-            chromedriver_path = '/Users/lucho/Downloads/Prueba cargo QA R5/AutomationWithPOM/Driver/chromedriver'
+            chromedriver_path = '/Users/lucho/LUIS/Prueba cargo QA R5/AutomationWithPOM/Driver/chromedriver'
             # Configuro las opciones del navegador
             chrome_options = webdriver.ChromeOptions()
             try:
@@ -18,7 +18,7 @@ class WebDriverElements:
             self.driver.delete_all_cookies()
         elif browser.lower() == "firefox":
             # Especifico la ubicación del firefoxdriver
-            firefoxdriver_path = '/Users/lucho/Downloads/Prueba cargo QA R5/AutomationWithPOM/Driver/geckodriver'
+            firefoxdriver_path = '/Users/lucho/LUIS/Prueba cargo QA R5/AutomationWithPOM/Driver/geckodriver'
             # Configuro las opciones del navegador
             firefox_options = webdriver.FirefoxOptions()
             try:
