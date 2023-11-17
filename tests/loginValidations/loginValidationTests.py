@@ -28,7 +28,7 @@ class LoginValidationsTests(unittest.TestCase):
 
         # Assert para validar la alerta
         expected_text = "Epic sadface: Password is required"
-        alert_text = loginValidations.user_name_required()
+        alert_text = loginValidations.user_password_required()
         self.assertEqual(alert_text, expected_text, f"NO se está validando que el campo Password sea requerido. "
                                                     f"Se esperaba: '{expected_text}', pero se obtuvo: '{alert_text}'.")
 
